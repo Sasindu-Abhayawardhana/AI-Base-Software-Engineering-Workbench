@@ -1,125 +1,83 @@
 # AI-Powered Software Engineering Workbench
 
-An interactive Streamlit workbench for turning software requirements into architecture insights, diagrams, and implementation guidance using AI models.
+**From requirements to architecture — instantly.**
 
-## Overview
+A professional, high-fidelity engineering workbench built with Streamlit for turning high-level software requirements into structured architectural designs, technical stacks, and interactive diagrams using Retrieval-Augmented Generation (RAG).
 
-This repository provides two Streamlit-based workbench experiences:
+## 🚀 Key Features
 
-- `workbench.py`: a software engineering assistant workflow.
-- `rag_workbench.py`: an architecture-focused workbench with Retrieval-Augmented Generation (RAG) support using local course materials.
+- **Professional Design System**: Theme-aware interface with instant Light/Dark mode toggling and a clean industrial aesthetic.
+- **Unified Streaming Engine**: Native support for token-by-token generation across multiple providers:
+  - **Local**: Ollama (Mistral/Llama3)
+  - **Cloud**: Google Gemini, Anthropic Claude, DeepSeek, and OpenAI.
+- **Intelligent RAG Grounding**: Deep retrieval layer that contextualizes AI responses using local documentation in `course_materials/`.
+- **Architectural Suite**:
+  - Pattern recommendation and justification.
+  - Tactic analysis (Scalability, Availability, Security).
+  - Technology stack mapping and component breakdowns.
+  - Risk assessment and quality attribute reasoning.
+- **Dynamic Visualization**: Integrated Mermaid.js rendering with a direct "Live Editor" export for professional editing.
 
-The apps are designed to help with:
-
-- Requirement analysis
-- Architecture style recommendation
-- Component and technology suggestions
-- Mermaid-based architecture diagram generation
-- Risk and quality attribute reasoning
-
-## Features
-
-- Modern Streamlit UI with structured analysis panels
-- Support for local LLM usage via Ollama
-- Optional multi-provider model selection UI (e.g., OpenAI, Claude, Gemini, DeepSeek in `rag_workbench.py`)
-- RAG flow over local documents in `course_materials/`
-- Mermaid diagram rendering inside the app
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 Software_WorkBench/
-├── rag_workbench.py        # Main architecture + RAG Streamlit app
-├── workbench.py            # Streamlit software engineering workbench
-├── prompts.py              # Prompt templates used by analysis flows
-├── course_materials/       # Local source docs for RAG ingestion
-├── chroma_db/              # Local Chroma vector database storage
-├── requirements.txt        # Python dependencies (currently minimal/empty)
+├── rag_workbench.py        # Main workbench with RAG and Professional UI
+├── workbench.py            # Legacy software engineering assistant
+├── prompts.py              # prompt templates for analysis flows
+├── course_materials/       # Document repository for RAG ingestion
+├── chroma_db/              # Persistent vector store storage
+├── requirements.txt        # Python dependency manifest
 └── README.md
 ```
 
-## Prerequisites
+## 🛠️ Prerequisites
 
-- Python 3.10+
-- `pip`
-- [Ollama](https://ollama.com/) running locally (for local model flows)
+- **Python**: 3.10 or higher.
+- **Ollama**: Required for local model execution and embeddings.
+- **Models**:
+  - `ollama pull mistral` (Primary local model)
+  - `ollama pull nomic-embed-text` (Required for RAG)
 
-Recommended Ollama models used in this repo:
+## 📥 Installation
 
-- `mistral` (generation)
-- `nomic-embed-text` (embeddings)
-- `llama3` (used by `workbench.py`)
-
-## Installation
-
-1. Clone the repository:
-
+1. **Clone and Navigate**:
    ```powershell
    git clone <your-repo-url>
    cd Software_WorkBench
    ```
 
-2. Create and activate a virtual environment:
-
+2. **Virtual Environment**:
    ```powershell
    python -m venv venv
    .\venv\Scripts\Activate.ps1
    ```
 
-3. Install dependencies:
-
+3. **Install Dependencies**:
    ```powershell
    pip install -r requirements.txt
    ```
 
-4. Ensure Ollama is running and pull required models:
+## 🖥️ Usage
 
-   ```powershell
-   ollama pull mistral
-   ollama pull nomic-embed-text
-   ollama pull llama3
-   ```
-
-## Running the Apps
-
-Run the architecture + RAG workbench:
-
+Launch the primary workbench:
 ```powershell
 streamlit run rag_workbench.py
 ```
 
-Run the alternate workbench UI:
+### RAG Setup
+1. Place architectural documents (PDF, TXT, MD) into the `course_materials/` directory.
+2. The app will automatically build or load the vector index into `chroma_db/` upon startup.
+3. Status indicators in the UI will confirm when the "Knowledge Base" is ready.
 
-```powershell
-streamlit run workbench.py
-```
+## ⚙️ Configuration
 
-After startup, open the local URL shown by Streamlit (typically `http://localhost:8501`).
+- **API Keys**: For Gemini, Claude, or OpenAI, keys are held in session memory only—never persisted to disk.
+- **Embedding Configuration**: Defaulted to `nomic-embed-text` via Ollama for high-performance local vectorization.
 
-## RAG Data Notes
+## 🤝 Contributing
 
-- Place source PDF/material files in `course_materials/`.
-- Vector index data is stored in `chroma_db/`.
-- If you change source materials heavily, re-indexing may be needed (depends on your app flow/session).
+Contributions to prompt templates or UI components are welcome. Please ensure any changes to `rag_workbench.py` maintain theme compatibility and CSS isolation.
 
-## Configuration Notes
-
-- `workbench.py` uses `OLLAMA_URL = http://localhost:11434/api/generate` and `MODEL_NAME = llama3`.
-- `rag_workbench.py` defaults include:
-  - generation model: `mistral`
-  - embeddings model: `nomic-embed-text`
-  - materials directory: `course_materials`
-  - vector store directory: `./chroma_db`
-
-If you plan to use hosted providers shown in the UI, configure the required API keys in your local environment before running.
-
-## Troubleshooting
-
-- **`Connection refused` or model errors**: verify Ollama is running and models are pulled.
-- **Missing package errors**: reinstall dependencies with `pip install -r requirements.txt`.
-- **No RAG results**: confirm files exist in `course_materials/` and index creation completed.
-- **Port already in use**: run Streamlit on another port, e.g. `streamlit run rag_workbench.py --server.port 8502`.
-
-## License
-
-See `LICENSE` for license information.
+---
+*Developed for AI-powered software design automation.*

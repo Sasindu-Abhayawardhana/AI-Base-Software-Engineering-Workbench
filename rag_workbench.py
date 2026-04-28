@@ -103,7 +103,7 @@ html, body, [data-testid="stAppViewContainer"] {{
 /* ── Panels ── */
 .panel {{ background: {v['surface']}; border: 1px solid {v['border']}; border-radius: 12px; padding: 1.1rem 1.25rem; margin-bottom: 0.85rem; box-shadow: 0 1px 4px {v['shadow']}; transition: border-color 0.2s; }}
 .panel:hover {{ border-color: {v['border2']}; }}
-.panel-label {{ font-family: 'IBM Plex Mono', monospace; color: {v['text3']}; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.65rem; }}
+.panel-label {{ font-family: 'IBM Plex Mono', monospace; color: {v['text3']}; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.65rem; }}
 
 /* ── Empty state ── */
 .empty-state {{ text-align: center; padding: 4rem 2rem; background: {v['surface']}; border: 1px dashed {v['border2']}; border-radius: 12px; }}
@@ -113,13 +113,13 @@ html, body, [data-testid="stAppViewContainer"] {{
 .empty-sub {{ font-size: 0.78rem; color: {v['text3']}; line-height: 1.6; }}
 
 /* ── Arch badge ── */
-.arch-badge {{ display: inline-flex; align-items: center; gap: 0.45rem; background: {v['accent_glow']}; border: 1.5px solid {v['accent']}; color: {v['accent_fg']}; font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 0.35rem 1rem; border-radius: 6px; letter-spacing: -0.01em; }}
+.arch-badge {{ display: inline-flex; align-items: center; gap: 0.45rem; background: {v['accent_glow']}; border: 1.5px solid {v['accent']}; color: {v['accent_fg']}; font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; padding: 0.35rem 1rem; border-radius: 6px; letter-spacing: -0.01em; }}
 .arch-badge::before {{ content: ''; width: 8px; height: 8px; border-radius: 2px; background: {v['accent']}; display: inline-block; opacity: 0.8; }}
-.just-box {{ background: {v['surface2']}; border-left: 3px solid {v['accent']}; border-radius: 0 8px 8px 0; padding: 0.8rem 1rem; font-size: 0.82rem; color: {v['text2']}; line-height: 1.7; margin-top: 0.6rem; }}
+.just-box {{ background: {v['surface2']}; border-left: 3px solid {v['accent']}; border-radius: 0 8px 8px 0; padding: 0.8rem 1rem; font-size: 0.94rem; color: {v['text2']}; line-height: 1.7; margin-top: 0.6rem; }}
 
 /* ── Tags ── */
 .tags {{ display: flex; flex-wrap: wrap; gap: 0.35rem; }}
-.tag {{ border-radius: 5px; font-size: 0.67rem; font-weight: 600; font-family: 'IBM Plex Mono', monospace; padding: 0.22rem 0.6rem; border: 1px solid; letter-spacing: 0.01em; }}
+.tag {{ border-radius: 5px; font-size: 0.74rem; font-weight: 600; font-family: 'IBM Plex Mono', monospace; padding: 0.22rem 0.6rem; border: 1px solid; letter-spacing: 0.01em; }}
 .tag-grey   {{ background: {v['surface2']}; border-color: {v['border2']}; color: {v['text2']}; }}
 .tag-green  {{ background: {v['green_bg']};  border-color: {v['green']};  color: {v['green_fg']};  }}
 .tag-blue   {{ background: {v['blue_bg']};   border-color: {v['blue']};   color: {v['blue_fg']};   }}
@@ -128,23 +128,23 @@ html, body, [data-testid="stAppViewContainer"] {{
 .tag-amber  {{ background: {v['amber_bg']};  border-color: {v['amber']};  color: {v['amber_fg']};  }}
 
 /* ── Components ── */
-.comp-row {{ display: grid; grid-template-columns: 160px 1fr auto; align-items: start; padding: 0.6rem 0; border-bottom: 1px solid {v['border']}; gap: 0.75rem; font-size: 0.79rem; }}
+.comp-row {{ display: grid; grid-template-columns: 180px 1fr auto; align-items: start; padding: 0.65rem 0; border-bottom: 1px solid {v['border']}; gap: 0.85rem; font-size: 0.9rem; }}
 .comp-row:last-child {{ border-bottom: none; }}
-.comp-name {{ color: {v['text']}; font-weight: 600; font-size: 0.8rem; }}
+.comp-name {{ color: {v['text']}; font-weight: 600; font-size: 0.92rem; }}
 .comp-role {{ color: {v['text2']}; line-height: 1.5; }}
-.comp-tech {{ color: {v['accent_fg']}; font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; white-space: nowrap; background: {v['accent_glow']}; border: 1px solid {v['accent']}; border-radius: 4px; padding: 0.15rem 0.45rem; }}
+.comp-tech {{ color: {v['accent_fg']}; font-family: 'IBM Plex Mono', monospace; font-size: 0.73rem; white-space: nowrap; background: {v['accent_glow']}; border: 1px solid {v['accent']}; border-radius: 4px; padding: 0.18rem 0.5rem; }}
 
 /* ── Stack grid ── */
 .stack-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.5rem; margin-top: 0.25rem; }}
 .stack-item {{ background: {v['surface2']}; border: 1px solid {v['border']}; border-radius: 8px; padding: 0.55rem 0.75rem; }}
-.stack-layer {{ font-family: 'IBM Plex Mono', monospace; font-size: 0.58rem; color: {v['text3']}; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.2rem; }}
-.stack-value {{ font-size: 0.75rem; font-weight: 600; color: {v['text']}; line-height: 1.3; }}
+.stack-layer {{ font-family: 'IBM Plex Mono', monospace; font-size: 0.65rem; color: {v['text3']}; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.2rem; }}
+.stack-value {{ font-size: 0.86rem; font-weight: 600; color: {v['text']}; line-height: 1.3; }}
 
 /* ── Risks ── */
-.risk {{ display: flex; align-items: flex-start; gap: 0.6rem; background: {v['red_bg']}; border-left: 3px solid {v['red']}; border-radius: 0 7px 7px 0; padding: 0.5rem 0.8rem; font-size: 0.78rem; color: {v['red_fg']}; margin-bottom: 0.4rem; line-height: 1.5; }}
+.risk {{ display: flex; align-items: flex-start; gap: 0.6rem; background: {v['red_bg']}; border-left: 3px solid {v['red']}; border-radius: 0 7px 7px 0; padding: 0.6rem 0.85rem; font-size: 0.9rem; color: {v['red_fg']}; margin-bottom: 0.45rem; line-height: 1.55; }}
 
 /* ── Mermaid code ── */
-.mermaid-code {{ background: {v['code_bg']}; border: 1px solid {v['border']}; border-radius: 8px; padding: 0.85rem 1rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.71rem; color: #7DD3FC; white-space: pre; overflow: auto; max-height: 210px; line-height: 1.6; }}
+.mermaid-code {{ background: {v['code_bg']}; border: 1px solid {v['border']}; border-radius: 8px; padding: 0.85rem 1rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; color: #7DD3FC; white-space: pre; overflow: auto; max-height: 230px; line-height: 1.6; }}
 .live-btn {{ display: inline-flex; align-items: center; gap: 0.4rem; background: transparent; color: {v['accent_fg']} !important; border: 1px solid {v['accent']}; font-size: 0.72rem; font-weight: 600; font-family: 'Instrument Sans', sans-serif; padding: 0.35rem 0.85rem; border-radius: 6px; text-decoration: none !important; margin-top: 0.6rem; transition: background 0.15s; letter-spacing: 0.01em; }}
 .live-btn:hover {{ background: {v['accent_glow']}; }}
 
@@ -152,18 +152,31 @@ html, body, [data-testid="stAppViewContainer"] {{
 .tip-item {{ display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.76rem; color: {v['text3']}; line-height: 1.55; padding: 0.2rem 0; }}
 .tip-bullet {{ width: 4px; height: 4px; border-radius: 50%; background: {v['text3']}; flex-shrink: 0; margin-top: 0.5rem; }}
 
+/* ── Layout helpers ── */
+.search-wrap {{ margin-bottom: 1rem; }}
+.search-grid {{ display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 0.85rem; margin-bottom: 0.6rem; }}
+.result-head {{ display:flex; align-items:center; gap:0.6rem; margin-bottom:0.65rem; }}
+.result-label {{ font-family:'IBM Plex Mono',monospace; font-size:0.82rem; letter-spacing:0.09em; text-transform:uppercase; }}
+.result-badge {{ background: {v['surface2']}; border:1px solid {v['border']}; border-radius:100px; padding:0.16rem 0.72rem; font-size:0.82rem; font-family:'IBM Plex Mono',monospace; }}
+
+@media (max-width: 1080px) {{
+    .search-grid {{ grid-template-columns: 1fr; }}
+    .comp-row {{ grid-template-columns: 1fr; }}
+    .comp-tech {{ width: fit-content; }}
+}}
+
 /* ── Streamlit widget overrides ── */
 .stButton > button {{ background: {v['accent']} !important; color: {v['btn_text']} !important; border: none !important; border-radius: 8px !important; padding: 0.6rem 1.5rem !important; font-family: 'Syne', sans-serif !important; font-size: 0.88rem !important; font-weight: 700 !important; letter-spacing: -0.01em !important; width: 100% !important; transition: all 0.18s !important; }}
 .stButton > button:hover {{ background: {v['accent_dim']} !important; box-shadow: 0 4px 16px {v['accent_glow']} !important; }}
 .stButton > button:disabled {{ opacity: 0.35 !important; }}
 
-.stTextArea > div > div > textarea {{ background: {v['surface2']} !important; border: 1px solid {v['border']} !important; border-radius: 8px !important; color: {v['text']} !important; font-family: 'Instrument Sans', sans-serif !important; font-size: 0.83rem !important; line-height: 1.6 !important; }}
+.stTextArea > div > div > textarea {{ background: {v['surface2']} !important; border: 1px solid {v['border']} !important; border-radius: 8px !important; color: {v['text']} !important; font-family: 'Instrument Sans', sans-serif !important; font-size: 0.9rem !important; line-height: 1.6 !important; }}
 .stTextArea > div > div > textarea:focus {{ border-color: {v['accent']} !important; box-shadow: 0 0 0 3px {v['accent_glow']} !important; outline: none !important; }}
 
-.stTextInput > div > div > input {{ background: {v['surface2']} !important; border: 1px solid {v['border']} !important; border-radius: 8px !important; color: {v['text']} !important; font-family: 'IBM Plex Mono', monospace !important; font-size: 0.78rem !important; }}
+.stTextInput > div > div > input {{ background: {v['surface2']} !important; border: 1px solid {v['border']} !important; border-radius: 8px !important; color: {v['text']} !important; font-family: 'IBM Plex Mono', monospace !important; font-size: 0.9rem !important; }}
 .stTextInput > div > div > input:focus {{ border-color: {v['accent']} !important; box-shadow: 0 0 0 3px {v['accent_glow']} !important; }}
 
-.stSelectbox > div > div {{ background: {v['surface2']} !important; border: 1px solid {v['border']} !important; border-radius: 8px !important; color: {v['text']} !important; font-family: 'Instrument Sans', sans-serif !important; }}
+.stSelectbox > div > div {{ background: {v['surface2']} !important; border: 1px solid {v['border']} !important; border-radius: 8px !important; color: {v['text']} !important; font-family: 'Instrument Sans', sans-serif !important; font-size: 0.9rem !important; }}
 .stSelectbox svg {{ color: {v['text2']} !important; fill: {v['text2']} !important; opacity: 1 !important; }}
 
 /* Status widget (generation progress) */
@@ -695,119 +708,110 @@ else:
 
 # ── MAIN LAYOUT ─────────────────────────────────────────────────────────────
 
-col_left, col_right = st.columns([1, 1.45], gap="large")
+st.markdown('<div class="search-wrap">', unsafe_allow_html=True)
 
-with col_left:
+# Model selector and search/input area on top
+st.markdown('<div class="panel"><div class="panel-label">Search & Model Configuration</div>', unsafe_allow_html=True)
 
-    # Model selector
-    st.markdown('<div class="panel"><div class="panel-label">Model Configuration</div>', unsafe_allow_html=True)
+model_options = []
+model_meta = {}
+for provider_key, (provider_label, models) in PROVIDERS.items():
+    for model_name in models:
+        option_label = f"{provider_label} · {model_name}"
+        model_options.append(option_label)
+        model_meta[option_label] = (provider_key, model_name)
 
-    model_options = []
-    model_meta = {}
-    for provider_key, (provider_label, models) in PROVIDERS.items():
-        for model_name in models:
-            option_label = f"{provider_label} · {model_name}"
-            model_options.append(option_label)
-            model_meta[option_label] = (provider_key, model_name)
-
-    m_col1, m_col2 = st.columns([1.2, 1])
-    with m_col1:
-        selected_option = st.selectbox("Model", model_options, key="wb_model_select")
-    with m_col2:
-        api_key = st.text_input(
-            "API Key", type="password",
-            placeholder="Paste key…",
-            key="wb_api_key",
-        )
-
-    chosen_provider, ext_model = model_meta[selected_option]
-
-    if chosen_provider != "local" and not api_key:
-        st.caption("API key required for this model.")
-    elif chosen_provider == "local":
-        st.caption(f"Using local **{ext_model}** via Ollama — no key needed.")
-
-    st.markdown('</div>', unsafe_allow_html=True)
-
-    # Requirements textarea
-    st.markdown('<div class="panel"><div class="panel-label">System Requirements</div>', unsafe_allow_html=True)
-    user_req = st.text_area(
-        label="req", label_visibility="collapsed", height=200,
-        placeholder=(
-            "Describe what the system should do…\n\n"
-            "e.g. A system that monitors patient vitals in real time via wearables. "
-            "Doctors are alerted for anomalies and patient history is stored securely."
-        ),
-        key="wb_user_req",
+left_col, right_col = st.columns(2)
+with left_col:
+    selected_option = st.selectbox("Model", model_options, key="wb_model_select")
+with right_col:
+    api_key = st.text_input(
+        "API Key", type="password",
+        placeholder="Paste key…",
+        key="wb_api_key",
     )
-    ready    = chosen_provider == "local" or bool(api_key)
-    generate = st.button(
-        f"Generate  ·  {PROVIDERS[chosen_provider][0]}",
-        key="wb_gen_btn", disabled=not ready,
-    )
-    if not ready:
-        st.caption("Enter an API key above to enable generation.")
 
-    st.markdown('</div>', unsafe_allow_html=True)
+chosen_provider, ext_model = model_meta[selected_option]
 
-    # Tips
-    tips = [
-        "Mention expected user load or data volume",
-        "Include compliance needs (HIPAA, GDPR, PCI-DSS)",
-        "Specify real-time vs batch requirements",
-        "List external integrations (APIs, devices, third-parties)",
-    ]
-    tip_items = "".join(
-        f'<div class="tip-item"><span class="tip-bullet"></span><span>{t}</span></div>'
-        for t in tips
-    )
-    st.markdown(f"""
-<div class="panel">
+if chosen_provider != "local" and not api_key:
+    st.caption("API key required for this model.")
+elif chosen_provider == "local":
+    st.caption(f"Using local **{ext_model}** via Ollama — no key needed.")
+
+user_req = st.text_area(
+    label="req", label_visibility="collapsed", height=220,
+    placeholder=(
+        "Describe what the system should do…\n\n"
+        "e.g. A system that monitors patient vitals in real time via wearables. "
+        "Doctors are alerted for anomalies and patient history is stored securely."
+    ),
+    key="wb_user_req",
+)
+
+ready = chosen_provider == "local" or bool(api_key)
+generate = st.button(
+    f"Generate  ·  {PROVIDERS[chosen_provider][0]}",
+    key="wb_gen_btn", disabled=not ready,
+)
+if not ready:
+    st.caption("Enter an API key above to enable generation.")
+
+tips = [
+    "Mention expected user load or data volume",
+    "Include compliance needs (HIPAA, GDPR, PCI-DSS)",
+    "Specify real-time vs batch requirements",
+    "List external integrations (APIs, devices, third-parties)",
+]
+tip_items = "".join(
+    f'<div class="tip-item"><span class="tip-bullet"></span><span>{t}</span></div>'
+    for t in tips
+)
+st.markdown(f"""
+<div style="margin-top:0.7rem;">
   <div class="panel-label">Tips for better results</div>
   {tip_items}
 </div>""", unsafe_allow_html=True)
 
+st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html=True)
 
-with col_right:
+if generate:
+    if not user_req.strip():
+        st.warning("Please enter some requirements first.")
+    else:
+        prov_label = PROVIDERS[chosen_provider][0]
+        model_label = ext_model if chosen_provider != "local" else MODEL_NAME
+        try:
+            with st.status(f"Generating with {prov_label} / {model_label}…", expanded=True) as gen_status:
+                raw_text = st.write_stream(
+                    get_stream(user_req, vectorstore, chosen_provider, api_key, ext_model)
+                )
+                gen_status.update(label=f"Done — {prov_label}", state="complete", expanded=False)
+            result = _parse_json(raw_text)
+            st.session_state["arch_result"] = result
+            st.session_state["arch_provider"] = prov_label
+            st.session_state["arch_raw"] = raw_text
+        except requests.HTTPError as e:
+            st.error(f"API error {e.response.status_code}: {e.response.text[:300]}")
+        except Exception as e:
+            st.error(f"{type(e).__name__}: {e}")
 
-    if generate:
-        if not user_req.strip():
-            st.warning("Please enter some requirements first.")
-        else:
-            prov_label  = PROVIDERS[chosen_provider][0]
-            model_label = ext_model if chosen_provider != "local" else MODEL_NAME
-            try:
-                with st.status(f"Generating with {prov_label} / {model_label}…",
-                               expanded=True) as gen_status:
-                    raw_text = st.write_stream(
-                        get_stream(user_req, vectorstore, chosen_provider, api_key, ext_model)
-                    )
-                    gen_status.update(label=f"Done — {prov_label}", state="complete",
-                                      expanded=False)
-                result = _parse_json(raw_text)
-                st.session_state["arch_result"]   = result
-                st.session_state["arch_provider"]  = prov_label
-                st.session_state["arch_raw"]       = raw_text
-            except requests.HTTPError as e:
-                st.error(f"API error {e.response.status_code}: {e.response.text[:300]}")
-            except Exception as e:
-                st.error(f"{type(e).__name__}: {e}")
-
-    if "arch_result" in st.session_state:
-        prov = st.session_state.get("arch_provider", "")
-        st.markdown(f"""
-<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.65rem;">
-  <span style="font-family:'IBM Plex Mono',monospace;font-size:0.63rem;letter-spacing:0.1em;text-transform:uppercase;">Result</span>
-  <span style="background:var(--surface2,#191D28);border:1px solid var(--border,#252B3B);border-radius:100px;padding:0.1rem 0.6rem;font-size:0.65rem;font-family:'IBM Plex Mono',monospace;">{prov}</span>
+# Full-width results section below search
+if "arch_result" in st.session_state:
+    prov = st.session_state.get("arch_provider", "")
+    st.markdown(f"""
+<div class="result-head">
+  <span class="result-label">Result</span>
+  <span class="result-badge">{prov}</span>
 </div>""", unsafe_allow_html=True)
 
-        render_results(st.session_state["arch_result"])
+    render_results(st.session_state["arch_result"])
 
-        with st.expander("Raw LLM output"):
-            st.code(st.session_state.get("arch_raw", ""), language="json")
+    with st.expander("Raw LLM output"):
+        st.code(st.session_state.get("arch_raw", ""), language="json")
 
-    else:
-        st.markdown("""
+else:
+    st.markdown("""
 <div class="empty-state">
   <div class="empty-icon">
     <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>

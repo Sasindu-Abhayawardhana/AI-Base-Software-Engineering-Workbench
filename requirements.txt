@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain-ollama
+langchain-chroma
+langchain-community
+pypdf
+requests
+streamlit-mermaid
