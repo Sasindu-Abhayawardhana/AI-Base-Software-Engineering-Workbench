@@ -660,7 +660,7 @@ with hdr_l:
         </svg>
       </div>
       <div>
-        <div class="wb-title">AI-Base Software Engineering Workbench</div>
+        <div class="wb-title">AI-Powered Software Engineering Workbench</div>
         <div class="wb-tagline">
           From requirements to architecture — instantly
         </div>
