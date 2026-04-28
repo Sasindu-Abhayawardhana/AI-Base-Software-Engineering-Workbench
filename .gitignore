@@ -5,8 +5,7 @@ __pycache__/
 *.pyo
 *.pyd
 
-.idea/workspace.xml
-.idea/shelf/
+.idea/
 
 .DS_Store
 Thumbs.db
