@@ -1,0 +1,20 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.idea/workspace.xml
+.idea/shelf/
+
+.DS_Store
+Thumbs.db
+
+# Local vector DB/cache artifacts
+chroma_db/
+course_materials/
+
+# Local secrets/env files
+.env
+*.env
