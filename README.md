@@ -4,6 +4,16 @@
 
 A professional, high-fidelity engineering workbench built with Streamlit for turning high-level software requirements into structured architectural designs, technical stacks, and interactive diagrams using Retrieval-Augmented Generation (RAG).
 
+Demo : 
+
+https://github.com/user-attachments/assets/d7e5eace-85c2-4822-9fef-e3c027735d11
+
+
+
+
+
+
+
 ## 🚀 Key Features
 
 - **Professional Design System**: Theme-aware interface with instant Light/Dark mode toggling and a clean industrial aesthetic.
